@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="row">
+        <div class="col-75">
+            <div class="container">
+                <form action="/action_page.php">
+
+                    <div class="row">
+
+                        <div class="col-50">
+                            <h3>Payment</h3>
+                            <label for="fname">Payment options</label>
+                            <div class="icon-container">
+                                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                            </div>
+                            <h5 id="visa">VISA</h5>
+                            <label for="visacname">Name on Card</label>
+                            <input type="text" id="visacname" name="visacardname" placeholder="John More Doe">
+                            <div>
+                                <label for="ccnum">Credit card number</label>
+                                <input type="text" id="visaccnum" name="visacardnumber" placeholder="1111-2222-3333-4444">
+                            </div>
+                            <label for="expmonth">Exp Month</label>
+                            <input type="text" id="visaexpmonth" name="visaexpmonth" placeholder="September">
+                            <div>
+                                <label for="Address">Address</label>
+                                <input type="text" id="visaaddress" name="visaaddress">
+                            </div>
+                            <div>
+                                <label for="Country">Country</label>
+                                <input type="text" id="visacountry" name="visacountryname" placeholder="Bangladesh">
+                            </div>
+                            <div class="row">
+                                <div class="col-50">
+                                    <label for="expyear">Exp Year</label>
+                                    <input type="text" id="expyear" name="expyear" placeholder="2018">
+                                </div>
+                                <div class="col-50">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" name="cvv" placeholder="352">
+                                </div>
+                            </div>
+                            <h5 id="mastercard">MASTER CARD</h5>
+                            <label for="mastername">Name on Card</label>
+                            <input type="text" id="mastername" name="mastername" placeholder="John More Doe">
+                            <div>
+                                <label for="ccnum">Credit card number</label>
+                                <input type="text" id="masternumber" name="masternumber" placeholder="1111-2222-3333-4444">
+                            </div>
+                            <label for="expmonth">Exp Month</label>
+                            <input type="text" id="masterexpmonth" name="masterexpmonth" placeholder="September">
+                            <div>
+                                <label for="Address">Address</label>
+                                <input type="text" id="masteraddress" name="masteraddress">
+                            </div>
+                            <div>
+                                <label for="Country">Country</label>
+                                <input type="text" id="mastercountry" name="mastercountry" placeholder="Bangladesh">
+                            </div>
+                            <div class="row">
+                                <div class="col-50">
+                                    <label for="expyear">Exp Year</label>
+                                    <input type="text" id="expyear" name="expyear" placeholder="2018">
+                                </div>
+                                <div class="col-50">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" name="cvv" placeholder="352">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <input type="submit" value="Continue to checkout" class="btn">
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+    </html>
