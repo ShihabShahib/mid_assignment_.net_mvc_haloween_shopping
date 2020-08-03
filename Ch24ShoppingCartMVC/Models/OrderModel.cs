@@ -16,7 +16,6 @@ namespace Ch24ShoppingCartMVC.Models
         {
             using (HalloweenEntities data = new HalloweenEntities())
             {  //get all the products from the Collection Products order by name using HalloweenEntities
-                //Product p = new Product();
                 return data.Products.OrderBy(p => p.Name).ToList();
             }
         }
@@ -38,10 +37,9 @@ namespace Ch24ShoppingCartMVC.Models
         public List<ProductViewModel> GetProductsList()
         {
             if (this.products == null)
-            {
+            {//Call the method GetAllProduct
                 this.products = GetAllProducts();
             }
-            //Call the method GetAllProduct
             //Return the products
             return this.products;
         }
@@ -49,7 +47,7 @@ namespace Ch24ShoppingCartMVC.Models
         {
             List<ProductViewModel> productmodels = new List<ProductViewModel>();
             // Call the GetAllProductsFromDataStore()
-            List<Product> products = GetAllProductsFromDataStore();
+            var products = GetAllProductsFromDataStore();
             foreach (Product p in products)
             {  //Call the method ConvertToViewModel to convert p and pass the method ConvertToViewModel to the method add of the productmodels
                 productmodels.Add(ConvertToViewModel(p));
@@ -61,7 +59,6 @@ namespace Ch24ShoppingCartMVC.Models
         {
             using (HalloweenEntities data = new HalloweenEntities())
             {  //Get a product from Products of data where ProductID is matched with id parameter
-                //Product p = new Product();
                 return data.Products.Where(p => p.ProductID == id).FirstOrDefault();
             }
         }
@@ -79,7 +76,6 @@ namespace Ch24ShoppingCartMVC.Models
                 return ConvertToViewModel(GetProductByIdFromDataStore(id));
             else
                 //Get the product from the products where ProductID is matched with id (Using Lambda expression)
-                //Product p = new Product();
                 return products.Where(p => p.ProductID == id).FirstOrDefault();
 
 
